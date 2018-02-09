@@ -1,0 +1,25 @@
+{
+	"manifest_version": 2,
+	"name": "hsDebug Extension Spiro",
+	"version": "2.1",
+	"description": "A chrome extension to enable and disable the hsDebug=True query string parameter",
+	"content_scripts": [
+		{
+			"matches": [
+				"<all_urls>"
+			],
+			"js": ["jquery-3.2.1.min.js"
+			]
+		}
+	],
+	"browser_action": {
+		"default_icon": "icon.png"
+	},
+	"background": {
+		"persistent": false,
+		"scripts": ["background.js"]
+	},
+	"permissions": [
+		"tabs"
+	]
+}
